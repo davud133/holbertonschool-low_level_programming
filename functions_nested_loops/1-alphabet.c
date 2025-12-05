@@ -1,20 +1,11 @@
 #include "main.h"
 /**
- * main - Entry Point
+ * print_alphabet A function
  *
  * Description: 'a task'
  *
  * Return: always 0 (success)
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-void _putchar(char c)
-{
-	write(1,c,1);
-}
 void print_alphabet()
 {
 	int i;
