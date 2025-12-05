@@ -1,4 +1,6 @@
 #include <unistd.h>
+#DEFINE INT_MAX 2147483647
+#DEFINE INT_MIN -214748348
 /**
  * main - Entry point
  *
