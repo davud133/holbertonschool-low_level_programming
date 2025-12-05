@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * print_alphabet A function
+ * print_alphabet - prints the alphabet in lowercase
  *
- * Description: 'a task'
- *
- * Return: always 0 (success)
+ * Return: nothing
  */
 void print_alphabet(void)
 {
