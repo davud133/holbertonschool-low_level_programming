@@ -1,11 +1,4 @@
 #include <unistd.h>
-#ifndef MAIN_H
-#define MAIN_H
-
-#define INT_MIN -2147483648
-#define INT_MAX  2147483647
-
-#endif
 /**
  * main - Entry point
  *
