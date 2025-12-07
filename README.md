@@ -1,2 +1,1 @@
-# holbertonschool-low_level_programming
-low level programming tasks
+ more Tasks about functions and loops
