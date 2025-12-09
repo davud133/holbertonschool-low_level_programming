@@ -1,0 +1,1 @@
+Task solutions about pointers
