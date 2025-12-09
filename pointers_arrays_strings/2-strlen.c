@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strlen - it gives the size of string
- * @c: the string
+ * @s: the string
  *
  * Return: integer
  */
