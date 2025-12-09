@@ -3,7 +3,7 @@
 /**
  * print_array - it prints array's n elements
  * @a: array
- * @n; number
+ * @n: number
  *
  * Return: nothing
  */
@@ -17,5 +17,5 @@ void print_array(int *a, int n)
 		if (i != n - 1)
 			printf(", ");
 	}
-	_putchar('\n');
+	printf('\n');
 }
