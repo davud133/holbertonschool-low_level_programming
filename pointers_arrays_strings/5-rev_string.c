@@ -17,7 +17,7 @@ void rev_string(char *str)
 	if (last_index > 1)
 	{
 		last_index--;
-		b = last_index;	
+		b = last_index;
 		for (i = 0; i < b / 2 + 1; i++)
 		{
 			k = str[last_index];
@@ -26,4 +26,4 @@ void rev_string(char *str)
 			last_index--;
 		}
 	}
-}	
+}
