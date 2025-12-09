@@ -14,13 +14,16 @@ void rev_string(char *str)
 
 	while (str[last_index] != '\0')
 		last_index++;
-	last_index--;
-	b = last_index;	
-	for (i = 0; i < b / 2; i++)
+	if (last_index > 1)
 	{
-		k = str[last_index];
-		str[last_index] = str[i];
-		str[i] = k;
 		last_index--;
+		b = last_index;	
+		for (i = 0; i < b / 2 + 1; i++)
+		{
+			k = str[last_index];
+			str[last_index] = str[i];
+			str[i] = k;
+			last_index--;
+		}
 	}
 }	
