@@ -14,9 +14,10 @@ void print_rev(char *str)
 		last_index++;
 	}
 	last_index--;
-	while (last_index > 0)
+	while (last_index > -1)
 	{
 		_putchar(str[last_index]);
 		last_index--;
 	}
+	_putchar('\n');
 }
