@@ -9,7 +9,7 @@ int _atoi(char *str)
 {
 	int int_count = 0;
 	int i;
-	int n = 0;
+	unsigned int n = 0;
 	int pow = 1;
 	int k;
 	int is_positive = 1;
