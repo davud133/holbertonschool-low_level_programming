@@ -34,6 +34,6 @@ int _atoi(char *str)
 			pow = 1;
 		}
 	}
-	return (n);
+	return (n*is_positive);
 
 }
