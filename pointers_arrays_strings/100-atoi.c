@@ -19,8 +19,6 @@ int _atoi(char *str)
 			int_count++;
 		if (str[i] == '-')
 			is_positive = -1;
-		if (str[i] == '+')
-			is_positive = 1;
 	}
 	int_count--;
 	for (i = 0; str[i] != '\0'; i++)
