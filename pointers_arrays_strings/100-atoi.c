@@ -17,6 +17,11 @@ int _atoi(char *str)
 	{
 		if (str[i] >= '0' && str[i] <= '9')
 			int_count++;
+		else
+		{
+			if (int_count > 0)
+				break;
+		}
 		if (str[i] == '-')
 			is_positive = -1;
 	}
