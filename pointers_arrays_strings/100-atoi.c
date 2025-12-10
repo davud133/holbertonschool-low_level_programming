@@ -36,6 +36,11 @@ int _atoi(char *str)
 			int_count--;
 			pow = 1;
 		}
+		else 
+		{
+			if (int_count > 0)
+				break;
+		}
 	}
 	return (n*is_positive);
 
