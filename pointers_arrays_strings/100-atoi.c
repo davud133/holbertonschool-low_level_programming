@@ -12,10 +12,15 @@ int _atoi(char *str)
 	int n = 0;
 	int pow = 1;
 	int k;
+	int is_positive = 1;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] >= '0' && str[i] <= '9')
 			int_count++;
+		if (str[i] == '-')
+			is_positive *= -1;
+		if (str[i] == '+')
+			is_positive = 1;
 	}
 	int_count--;
 	for (i = 0; str[i] != '\0'; i++)
