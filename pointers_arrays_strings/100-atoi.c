@@ -17,13 +17,13 @@ int _atoi(char *str)
 	{
 		if (str[i] >= '0' && str[i] <= '9')
 			int_count++;
+		else if (str[i] == '-')
+			is_positive *= -1;
 		else
 		{
 			if (int_count > 0)
 				break;
 		}
-		if (str[i] == '-')
-			is_positive *= -1;
 	}
 	int_count--;
 	for (i = 0; str[i] != '\0'; i++)
