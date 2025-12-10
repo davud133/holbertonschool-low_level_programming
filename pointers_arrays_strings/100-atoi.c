@@ -38,7 +38,7 @@ int _atoi(char *str)
 		}
 		else 
 		{
-			if (int_count > 0)
+			if (int_count <= 0)
 				break;
 		}
 	}
