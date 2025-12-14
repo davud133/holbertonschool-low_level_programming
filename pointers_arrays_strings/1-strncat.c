@@ -21,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		if (i > lens)
 			break;
-		dest[lend+i] = src[i];
+		dest[lend + i] = src[i];
 	}
 	return (dest);
 }
