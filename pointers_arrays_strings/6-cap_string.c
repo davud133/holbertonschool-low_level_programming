@@ -13,7 +13,7 @@ char *cap_string(char *str)
 	{
 		if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i] != ',' && str[i] != ';' && str[i] != '.' && str[i] != '!' && str[i] != '?' && str[i] != '"' && str[i] != '(' && str[i] != ')' && str[i] != '{' && str[i] != '}')
 		{
-			if ( k == 0)
+			if (k == 0 && str[i] >= 97)
 			{
 				str[i] = str[i] - 32;
 				k = 1;
