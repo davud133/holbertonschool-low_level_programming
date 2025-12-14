@@ -9,7 +9,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *f;
+	char *f = NULL;
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
@@ -19,10 +19,10 @@ char *_strchr(char *s, char c)
 			f = &s[i];
 			break;
 		}
-		else
-		{
-			f = &s[i];
-		}
+	}
+	if (c == '\0')
+	{
+		f = &s[i];
 	}
 	return (f);
 }
