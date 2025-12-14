@@ -16,8 +16,8 @@ char *cap_string(char *str)
 			if (k == 0 && str[i] >= 97)
 			{
 				str[i] = str[i] - 32;
-				k = 1;
 			}
+			k = 1;
 		}
 		else
 		{
