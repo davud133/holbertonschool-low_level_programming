@@ -20,8 +20,6 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 				k++;
-			else
-				t = 1;
 		}
 		if (t == k)
 			break;
