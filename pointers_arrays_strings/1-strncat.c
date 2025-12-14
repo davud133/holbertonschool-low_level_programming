@@ -10,7 +10,6 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int i;
-	int k;
 	int lens = 0;
 	int lend = 0;
 
