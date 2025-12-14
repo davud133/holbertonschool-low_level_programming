@@ -5,7 +5,7 @@
  *
  * Return: char
  */
-char *leet(char *)
+char *leet(char *str)
 {
 	int i;
 
