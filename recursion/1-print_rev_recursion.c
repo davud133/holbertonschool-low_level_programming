@@ -8,10 +8,8 @@
 void _print_rev_recursion(char *s)
 {
 	char *k = &s[1];
-	if (k[-1] == '\0');
-	else
-	{
+
+	if (k[-1] != '\0')
 		_print_rev_recursion(k);
 		_putchar(k[-1]);
-	}
 }
