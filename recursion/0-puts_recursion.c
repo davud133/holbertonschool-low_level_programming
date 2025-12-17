@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 /**
  * _puts_recursion - it is recursive version of puts
  * @s: string
