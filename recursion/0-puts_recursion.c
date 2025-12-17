@@ -8,7 +8,7 @@
 void _puts_recursion(char *s)
 {
 	char *k;
-	if (&k[0] != s[0])
+	if (k[0] != s[0])
 	       _puthcar(s[0]);	
 	k = &s[1];
 	if (k[0] == '\0')
