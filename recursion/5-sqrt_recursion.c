@@ -12,13 +12,6 @@
  *
  * Return: integer
  */
-int mult(int i, int n);
-
-int _sqrt_recursion(int n)
-{
-	return (mult(0, n));
-}
-
 int mult(int i, int n)
 {
 	if (i * i > n)
@@ -26,4 +19,8 @@ int mult(int i, int n)
 	if (i * i != n)
 		return (mult(i + 1, n));
 	return (i);
+}
+int _sqrt_recursion(int n)
+{
+	return (mult(0, n));
 }
