@@ -5,6 +5,7 @@
  *
  * Return: integer
  */
+int mult(int i, int n);
 int _sqrt_recursion(int n)
 {
 	return mult(0,n);
