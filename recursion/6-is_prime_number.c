@@ -18,11 +18,11 @@ int check(int i, int n)
  * is_prime_number - check if a number is prime
  * @n: number
  *
- * Retur: integer
+ * Return: integer
  */
 int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return (check(2,n));
+	return (check(2, n));
 }
