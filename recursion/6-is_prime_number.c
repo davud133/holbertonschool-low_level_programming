@@ -11,7 +11,7 @@ int check(int i, int n)
 	if (i > n / 2)
 		return (1);
 	else if (n % i == 0)
-		return (check(i + 1, n);
+		return (check(i + 1, n));
 	return (0);
 }
 /**
