@@ -5,6 +5,13 @@
  *
  * Return: integer
  */
+/**
+ * mult - multiples the number i
+ * @i: number 1
+ * @n: number 2
+ *
+ * Return: integer
+ */
 int mult(int i, int n);
 
 int _sqrt_recursion(int n)
