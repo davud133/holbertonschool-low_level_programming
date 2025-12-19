@@ -1,11 +1,5 @@
 #include "main.h"
 /**
- * _sqrt_recursion - gives sqrt of a number
- * @n:  number
- *
- * Return: integer
- */
-/**
  * mult - multiples the number i
  * @i: number 1
  * @n: number 2
@@ -20,6 +14,12 @@ int mult(int i, int n)
 		return (mult(i + 1, n));
 	return (i);
 }
+/**
+ * _sqrt_recursion - gives sqrt of a number
+ * @n:  number
+ *
+ * Return: integer
+ */
 int _sqrt_recursion(int n)
 {
 	return (mult(0, n));
