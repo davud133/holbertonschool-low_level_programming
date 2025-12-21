@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - Entry Point
  * @argc: the number of arguments
@@ -21,9 +22,9 @@ int main(int argc, char*argv[])
 			printf("Error\n");
 			return (1);
 		}
-		else
+		else if (atoi(argv[i]) > 0)
 		{
-			sum+= atoi(argv[i]);
+			sum += atoi(argv[i]);
 		}
 	}
 	printf("%d\n", sum);
