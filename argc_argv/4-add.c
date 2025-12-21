@@ -13,14 +13,19 @@
 int main(int argc, char*argv[])
 {
 	int i;
+	int k;
 	int sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(argv[i]))
+		for (k = 0; argv[i][k] != '\0'; k++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][k]))
+			{
+				printf("Error\n");
+				return (1);
+
+			}
 		}
 		else if (atoi(argv[i]) > 0)
 		{
