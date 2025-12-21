@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints its name
- *
+ * @argc: number of arg
+ * @argv: arguments
  * Description: nothing
  *
  * Return: nothing
