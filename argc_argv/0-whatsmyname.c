@@ -6,7 +6,7 @@
  *
  * Return: nothing
  */
-void main(argc, *argv[])
+void main(int argc, char *argv[])
 {
 	puts(argv[0]);
 	return (0);
