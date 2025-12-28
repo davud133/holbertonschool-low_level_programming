@@ -10,9 +10,9 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len_s1;
-	int len_s2;
-	int i;
+	unsigned int len_s1;
+	unsigned int len_s2;
+	unsigned int i;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -27,11 +27,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len_s1 += 1;
 	if (n >= len_s2)
 	{
-		s1 = realloc(len_s1 + len_s2);
+		s1 = realloc(s1, len_s1 + len_s2);
 		n = len_s2;
 	}
 	else
-		s1 = realloc(len_s1 + n);
+		s1 = realloc(s1, len_s1 + n);
 	if (s1 == NULL)
 		return (NULL);
 	for (i = len_s1; i < len_s1 + n; i++)
