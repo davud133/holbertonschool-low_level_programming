@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * free_grid - frees 2D grid
- * @grid - the grid which will be freed
- * @height - height of the grid
+ * @grid: the grid which will be freed
+ * @height: height of the grid
  *
  * Return: nothing
  */
