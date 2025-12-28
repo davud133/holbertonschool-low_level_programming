@@ -31,6 +31,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 		k = malloc(len_s1 + n + 1 );
+	if (k == NULL)
+		return (NULL);
 	for (i = 0; i < len_s1 + n; i++)
 	{
 		if (i >= len_s1)
