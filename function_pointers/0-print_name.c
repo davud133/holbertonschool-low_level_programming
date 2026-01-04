@@ -1,3 +1,4 @@
+#include <stddef.h>          /* for NULL */
 #include "function_pointers.h"
 
 /**
