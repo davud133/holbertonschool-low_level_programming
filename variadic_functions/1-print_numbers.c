@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_numbers - prints numbers seperated by a char
- * @seperator: seperator string
+ * @separator: seperator string
  * @n: count of numbers;
  * @...: arguments
  *
