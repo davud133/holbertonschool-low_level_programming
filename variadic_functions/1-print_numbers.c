@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <stdlib.h>
 /**
  * print_numbers - prints numbers seperated by a char
  * @seperator: seperator string
@@ -20,4 +21,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s%d", seperator, va_arg(arg, int));
 	}
+	printf("\n");
 }
