@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_char
+ * print_char - prints char
  * @arg: char for printing
  *
  * Return: nothing
@@ -13,7 +13,7 @@ void print_char(va_list arg)
 }
 
 /**
- * print_int
+ * print_int - prints int
  * @arg: int for printing
  *
  * Return: nothing
@@ -24,7 +24,7 @@ void print_int(va_list arg)
 }
 
 /**
- * print_str
+ * print_str - prints string
  * @arg: str for printing
  *
  * Return: nothing
@@ -39,7 +39,7 @@ void print_str(va_list arg)
 }
 
 /**
- * print_float
+ * print_float - prints float
  * @arg: float for printing
  *
  * Return: nothing
