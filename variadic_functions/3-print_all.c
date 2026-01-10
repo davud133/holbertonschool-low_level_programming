@@ -60,8 +60,7 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	int k = 0;
 	va_list arg;
-	int outputed = 0;
-	char sep* = "";
+	char *sep = "";
 	char form[5] = {'c', 'i', 'f', 's', '\0'};
 	void (*f[4])(va_list);
 	f[0] = print_char;
