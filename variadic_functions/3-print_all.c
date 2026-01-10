@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 	f[2] = print_float;
 	f[3] = print_str;
 	va_start(arg, format);
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		while(form[k] != '\0')
 		{
