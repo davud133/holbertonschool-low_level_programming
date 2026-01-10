@@ -9,7 +9,7 @@
  */
 void print_char(va_list arg)
 {
-	printf("%c", va_arg(arg, char));
+	printf("%c", va_arg(arg, int));
 }
 
 /**
