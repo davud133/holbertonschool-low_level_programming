@@ -32,6 +32,7 @@ void print_int(va_list arg)
 void print_str(va_list arg)
 {
 	char *s = va_arg(arg, char *);
+
 	if (s == NULL)
 		s = "(nil)";
 	printf("%s", s);
@@ -63,6 +64,7 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 	char form[5] = {'c', 'i', 'f', 's', '\0'};
 	void (*f[4])(va_list);
+
 	f[0] = print_char;
 	f[1] = print_int;
 	f[2] = print_float;
@@ -70,7 +72,7 @@ void print_all(const char * const format, ...)
 	va_start(arg, format);
 	while (format != NULL && format[i] != '\0')
 	{
-		while(form[k] != '\0')
+		while (form[k] != '\0')
 		{
 			if (format[i] == form[k])
 			{
@@ -86,4 +88,3 @@ void print_all(const char * const format, ...)
 	va_end(arg);
 	printf("\n");
 }
-		
