@@ -50,7 +50,7 @@ dlistint_t *insert_end(dlistint_t *tail, int n)
 }
 
 /**
- * insert_dnodeint_at_index - inserts a node at a given index in a doubly linked list
+ * insert_dnodeint_at_index - iubly linked list
  * @h: pointer to the head of the list
  * @idx: index where the new node should be added (0-based)
  * @n: value of the new node
@@ -90,4 +90,3 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	return (new_node);
 }
-
