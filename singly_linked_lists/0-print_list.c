@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stddef.h>
+#include <stdio.h>
 /**
  * print_list - prints list of nodes
  * @h: Head node
