@@ -5,7 +5,7 @@
 /**
  * free_dlistint - frees doubly linked list
  * @head: head node;
- * 
+ *
  * Return: nothing
  */
 void free_dlistint(dlistint_t *head)
