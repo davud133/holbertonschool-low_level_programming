@@ -1,7 +1,13 @@
 #include "lists.h"
 #include <stdlib.h>
 
-/* Helper: insert at start of list */
+/**
+ * insert_start - inserts a new node at the beginning of a doubly linked list
+ * @h: pointer to the head of the list
+ * @n: value of the new node
+ *
+ * Return: address of the new node, or NULL on failure
+ */
 dlistint_t *insert_start(dlistint_t **h, int n)
 {
 	dlistint_t *new_node = malloc(sizeof(dlistint_t));
@@ -21,7 +27,13 @@ dlistint_t *insert_start(dlistint_t **h, int n)
 	return (new_node);
 }
 
-/* Helper: insert at end of list */
+/**
+ * insert_end - inserts a new node at the end of a doubly linked list
+ * @tail: pointer to the last node of the list
+ * @n: value of the new node
+ *
+ * Return: address of the new node, or NULL on failure
+ */
 dlistint_t *insert_end(dlistint_t *tail, int n)
 {
 	dlistint_t *new_node = malloc(sizeof(dlistint_t));
@@ -37,7 +49,14 @@ dlistint_t *insert_end(dlistint_t *tail, int n)
 	return (new_node);
 }
 
-/* Inserts a node at a given index in a doubly linked list */
+/**
+ * insert_dnodeint_at_index - inserts a node at a given index in a doubly linked list
+ * @h: pointer to the head of the list
+ * @idx: index where the new node should be added (0-based)
+ * @n: value of the new node
+ *
+ * Return: address of the new node, or NULL if it failed
+ */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *tmp = *h;
