@@ -5,7 +5,7 @@
 /**
  * get_dnodeint_at_index - gives the node at specific index
  * @head: head node;
- * @index: index 
+ * @index: index
  *
  * Return: nothing
  */
@@ -20,7 +20,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 			if (head->next != NULL)
 				head = head->next;
 			else
-				return(NULL);
+				return (NULL);
 		}
 		return (head);
 	}
