@@ -10,7 +10,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int k;
 	char *str = malloc(letters);
-	long unsigned int w;
+	long unsigned int w,r;
 	if (str == NULL)
 		return (0);
 	if (filename == NULL)
@@ -24,7 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(str);
 		return (0);
 	}
-	read(k,str,letters);
+	r = read(k,str,letters);
 	w = write(STDOUT_FILENO,str,letters);
 	if (w != letters)
 	{
