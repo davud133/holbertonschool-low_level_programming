@@ -11,6 +11,7 @@ int create_file(const char *filename, char *text_content)
 	int k;
 	int n;
 	int length;
+
 	if (text_content == NULL)
 		text_content = "";
 	for (length = 0; text_content[length] != '\0'; length++)
