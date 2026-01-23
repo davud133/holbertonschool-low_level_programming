@@ -2,7 +2,7 @@
 /**
  * read_textfile - reads data from a text file
  * @filename: name of filename
- * @letters: the number of letters 
+ * @letters: the number of letters
  *
  * Return: actual number of letters it could read
  */
@@ -11,6 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int k;
 	char *str = malloc(letters);
 	ssize_t w, r;
+
 	if (str == NULL)
 		return (0);
 	if (filename == NULL)
