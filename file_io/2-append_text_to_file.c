@@ -13,10 +13,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	ssize_t w;
 
 	if (filename == NULL)
-		return (-1);
-	for (length = 0; text_content[length] != '\0'; length++)
-	{
-	}
+		return (-1);	
 	k = open(filename, O_WRONLY | O_APPEND);
 	if (k == -1)
 	{
@@ -24,6 +21,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (text_content == NULL)
 		return (1);
+	for (length = 0; text_content[length] != '\0'; length++)
+	{
+	}
 	w = write(k, text_content, length);
 	if (w == -1)
 		return (-1);
