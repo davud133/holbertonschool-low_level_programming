@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 			write(2, &argv[1][i],1);
 		}
 		write(2,"\n",1);
+		dprintf(1, "%d\n", 98);
 		exit(98);
 	}
 	if (fdt == -1)
@@ -63,7 +64,7 @@ int main(int argc, char *argv[])
 		w = write(fdt,str + written ,r - written);
 		if (w == -1)
 		{
-			write(2,"Error: Can't write to file ",27);
+			write(2,"Error: Can't write to ",22);
 			for (i = 0; argv[2][i] != '\0'; i++)
 			{
 				write(2, &argv[2][i],1);
