@@ -11,9 +11,9 @@ int cp(int argc, char *argv[])
 	int fdt;
 	int fdf;
 	int i;
-	int close1, close2;
 	ssize_t r, w, written = 0;
 	char *str = malloc(1024);
+
 	if (str == NULL)
 		return (-1);
 	if (argc < 3 || argc > 3)
