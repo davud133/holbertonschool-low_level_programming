@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 			write(2, &argv[1][i],1);
 		}
 		write(2,"\n",1);
-		dprintf(1, "%d\n", 98);
+		dprintf(2, "%d\n", 98);
 		exit(98);
 	}
 	if (fdt == -1)
