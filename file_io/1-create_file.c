@@ -20,14 +20,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	k = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (k == -1)
-	{
-		free(text_content);
 		return (-1);
-	}
 	n = write(k, text_content, length);
 	if (n == -1)
 	{
-		free(text_content);
 		close(k);
 		return (-1);
 	}
