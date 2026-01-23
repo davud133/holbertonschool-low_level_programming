@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	}
 	if (fdt == -1)
 	{
-		write(2,"Error: Can't write read to file ",27);
+		write(2,"Error: Can't write to file ",27);
 		for (i = 0; argv[2][i] != '\0'; i++)
 		{
 			write(2, &argv[2][i],1);
