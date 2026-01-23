@@ -6,7 +6,7 @@
  *
  * Return: integer
  */
-int cp(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int fdt;
 	int fdf;
