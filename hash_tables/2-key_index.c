@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <stdlib.h>
 /**
  * key_index - gives an inde based on the key
  * @key: key
