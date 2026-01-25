@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		write(2,"Error: Can't read from file ",28);
 		for (i = 0; argv[1][i] != '\0'; i++)
 		{
-			write(2, &argv[1][i],1);
+			write(STDERR_FILENO, &argv[1][i],1);
 		}
 		write(2,"\n",1);
 		return (98);
