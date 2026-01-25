@@ -5,8 +5,8 @@
  * @fdf: file from
  * @r: readen
  * @w: written
- * @argv1: argv1
- * @argv2: argv2
+ * @argv1: ar1
+ * @argv2: ar2
  *
  * Return: nothing
  */
@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
 		write(2, "\n", 1);
 		return (99);
 	}
-	write_file(fdt, fdf, r, w, argv[1], argv[2]);	
+	write_file(fdt, fdf, r, w, argv[1], argv[2]);
 	check_close(fdf, fdt);
 	return (0);
 }
