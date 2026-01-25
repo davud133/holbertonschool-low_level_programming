@@ -25,12 +25,12 @@ int main(int argc, char *argv[])
 	fdf = open(argv[1], O_RDONLY);
 	if (fdf == -1)
 	{
-		write(2,"Error: Can't read from file ",28);
+		write(STDERR_FILENO,"Error: Can't read from file ",28);
 		for (i = 0; argv[1][i] != '\0'; i++)
 		{
 			write(STDERR_FILENO, &argv[1][i],1);
 		}
-		write(2,"\n",1);
+		write(STDERR_FILENO,"\n",1);
 		return (98);
 	}
 	if (fdt == -1)
