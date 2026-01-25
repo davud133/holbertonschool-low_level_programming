@@ -5,11 +5,14 @@
  * @fdf: file from
  * @r: readen
  * @w: written
+ * @argv1: argv1
+ * @argv2: argv2
  *
  * Return: nothing
  */
-void write_file(int fdt, int fdf, ssize_t r, ssize_t w)
+void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2)
 {
+	int i;
 	do
 	{
 		r = read(fdf, str, 1024);
@@ -109,7 +112,7 @@ int main(int argc, char *argv[])
 		write(2, "\n", 1);
 		return (99);
 	}
-	write_file(fdt, fdf, r, w);	
+	write_file(fdt, fdf, r, w, argv[1], argv[2]);	
 	check_close(fdf, fdt);
 	free(str);
 	return (0);
