@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
 	int fdt;
 	int fdf;
 	int i;
-	ssize_t r, w;
+	ssize_t r = 0, w = 0;
 
 	if (argc < 3 || argc > 3)
 	{
