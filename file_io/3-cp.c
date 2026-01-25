@@ -13,6 +13,7 @@
 void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2)
 {
 	int i;
+	ssize_t written = 0;
 	do
 	{
 		r = read(fdf, str, 1024);
@@ -80,7 +81,7 @@ int main(int argc, char *argv[])
 	int fdt;
 	int fdf;
 	int i;
-	ssize_t r, w, written = 0;
+	ssize_t r, w;
 	char *str = malloc(1024);
 
 	if (str == NULL)
