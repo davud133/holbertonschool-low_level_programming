@@ -14,15 +14,16 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 {
 	int i;
 	ssize_t written = 0;
+	char *str = malloc(1024);
 	do
 	{
 		r = read(fdf, str, 1024);
 		if (r == -1)
 		{
 			write(2, "Error: Can't read from file ", 28);
-			for (i = 0; argv[1][i] != '\0'; i++)
+			for (i = 0; argv1[i] != '\0'; i++)
 			{
-				write(2, &argv[1][i], 1);
+				write(2, &argv1[i], 1);
 			}
 			write(2, "\n", 1);
 			exit (98);
@@ -35,9 +36,9 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 			if (w == -1)
 			{
 				write(2, "Error: Can't write to ", 22);
-				for (i = 0; argv[2][i] != '\0'; i++)
+				for (i = 0; argv2[i] != '\0'; i++)
 				{
-					write(2, &argv[2][i], 1);
+					write(2, &argv2[i], 1);
 				}
 				write(2, "\n", 1);
 				exit (99);
@@ -54,7 +55,7 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
  *
  * Return: nothing
  */
-void check_close(fdf, fdt)
+void check_close(int fdf, int fdt)
 {
 	if (close(fdf) == -1)
 	{
@@ -82,7 +83,7 @@ int main(int argc, char *argv[])
 	int fdf;
 	int i;
 	ssize_t r, w;
-	char *str = malloc(1024);
+
 
 	if (str == NULL)
 		return (-1);
