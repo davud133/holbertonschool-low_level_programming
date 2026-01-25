@@ -5,8 +5,8 @@
  * @fdf: file from
  * @r: readen
  * @w: written
- * @argv1: ar1
- * @argv2: ar2
+ * @ar1: ar1 variable
+ * @ar2: ar2 variable
  *
  * Return: nothing
  */
