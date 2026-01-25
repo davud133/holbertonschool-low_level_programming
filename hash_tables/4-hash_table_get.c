@@ -1,4 +1,6 @@
 #include "hash_tables.h"
+#include <stdlib.h>
+#include <string.h>
 /**
  * hash_table_get- return the value asssosicated with the key
  * @ht: table
