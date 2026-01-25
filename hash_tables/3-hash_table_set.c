@@ -1,5 +1,6 @@
 #include "hash_tables.h"
 #include <string.h>
+#include <stdlib.h>
 /**
  * hash_table_set - sets array's index to specific key using djb2 hash function
  * @ht: table
