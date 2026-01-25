@@ -12,10 +12,9 @@
  */
 void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2)
 {
-	r = 0;
-	w = 0;
 	int i;
 	ssize_t written = 0;
+
 	char *str = malloc(1024);
 	if (str == NULL)
 		exit (-1);
@@ -87,8 +86,10 @@ int main(int argc, char *argv[])
 	int fdt;
 	int fdf;
 	int i;
-	ssize_t r = 0, w = 0;
+	ssize_t r, w;
 
+	r = 0;
+	w = 0;
 	if (argc < 3 || argc > 3)
 	{
 		write(2, "Usage: cp file_from file_to\n", 28);
