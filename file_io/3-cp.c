@@ -1,8 +1,74 @@
 #include "main.h"
 /**
- * cp - copies from one to another
+ * write_file - writes to a file
+ * @fdt: file to
+ * @fdf: file from
+ * @r: readen
+ * @w: written
+ *
+ * Return: nothing
+ */
+void write_file(int fdt, int fdf, ssize_t r, ssize_t w)
+{
+	do
+	{
+		r = read(fdf, str, 1024);
+		if (r == -1)
+		{
+			write(2, "Error: Can't read from file ", 28);
+			for (i = 0; argv[1][i] != '\0'; i++)
+			{
+				write(2, &argv[1][i], 1);
+			}
+			write(2, "\n", 1);
+			return (98);
+		}
+		if (r == 0)
+			break;
+		while (written < r)
+		{
+			w = write(fdt, str + written, r - written);
+			if (w == -1)
+			{
+				write(2, "Error: Can't write to ", 22);
+				for (i = 0; argv[2][i] != '\0'; i++)
+				{
+					write(2, &argv[2][i], 1);
+				}
+				write(2, "\n", 1);
+				return (99);
+			}
+			written += w;
+		}
+		written = 0;
+	} while (1);
+}
+/**
+ * check_close - checks if file closed
+ * @fdf: file from
+ * @fdt: file to
+ *
+ * Return: nothing
+ */
+void check_close(fdf, fdt)
+{
+	if (close(fdf) == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fdf);
+		exit(100);
+	}
+	if (close(fdt) == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fdt);
+		exit(100);
+	}
+}
+/**
+ * main - Entry Point
  * @argc: number of arguments
  * @argv: arguments
+ * 
+ * Description: copies file to another
  *
  * Return: integer
  */
@@ -43,48 +109,9 @@ int main(int argc, char *argv[])
 		write(2, "\n", 1);
 		return (99);
 	}
-	do
-	{
-	r = read(fdf, str, 1024);
-	if (r == -1)
-	{
-		write(2, "Error: Can't read from file ", 28);
-		for (i = 0; argv[1][i] != '\0'; i++)
-		{
-			write(2, &argv[1][i], 1);
-		}
-		write(2, "\n", 1);
-		return (98);
-	}
-	if (r == 0)
-		break;
-	while (written < r)
-	{
-		w = write(fdt, str + written, r - written);
-		if (w == -1)
-		{
-			write(2, "Error: Can't write to ", 22);
-			for (i = 0; argv[2][i] != '\0'; i++)
-			{
-				write(2, &argv[2][i], 1);
-			}
-			write(2, "\n", 1);
-			return (99);
-		}
-		written += w;
-	}
-	written = 0;
-	} while (1);
-	if (close(fdf) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fdf);
-		exit(100);
-	}
-	if (close(fdt) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fdt);
-		exit(100);
-	}
+	write_file(fdt, fdf, r, w);	
+	check_close(fdf, fdt);
 	free(str);
 	return (0);
 }
+
