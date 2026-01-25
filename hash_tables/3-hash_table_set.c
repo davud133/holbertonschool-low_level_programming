@@ -13,11 +13,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node;
 	unsigned long int index;
 
-	index = hash_djb2(key);
+	index = hash_djb2((unsigned char *)key);
 	if (ht == NULL)
 		return (0);
 	index = index % ht->size;
-	new_node = malloc(sizeof(hash_node_t));
+	new_node = malloc(sizeof(hash_node_t *));
 	if (new_node == NULL)
 		return (0);
 	new_node->value = strdup(value);
