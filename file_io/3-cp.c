@@ -24,7 +24,7 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 				write(2, &argv[1][i], 1);
 			}
 			write(2, "\n", 1);
-			return (98);
+			exit (98);
 		}
 		if (r == 0)
 			break;
@@ -39,7 +39,7 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 					write(2, &argv[2][i], 1);
 				}
 				write(2, "\n", 1);
-				return (99);
+				exit (99);
 			}
 			written += w;
 		}
