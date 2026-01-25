@@ -10,7 +10,7 @@
  *
  * Return: nothing
  */
-void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2)
+void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *ar1, char *ar2)
 {
 	int i;
 	ssize_t written = 0;
@@ -18,14 +18,14 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 
 	if (str == NULL)
 		exit(-1);
-	do{
+	do {
 		r = read(fdf, str, 1024);
 		if (r == -1)
 		{
 			write(2, "Error: Can't read from file ", 28);
-			for (i = 0; argv1[i] != '\0'; i++)
+			for (i = 0; ar1[i] != '\0'; i++)
 			{
-				write(2, &argv1[i], 1);
+				write(2, &ar1[i], 1);
 			}
 			write(2, "\n", 1);
 			exit(98);
@@ -38,9 +38,9 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 			if (w == -1)
 			{
 				write(2, "Error: Can't write to ", 22);
-				for (i = 0; argv2[i] != '\0'; i++)
+				for (i = 0; ar2[i] != '\0'; i++)
 				{
-					write(2, &argv2[i], 1);
+					write(2, &ar2[i], 1);
 				}
 				write(2, "\n", 1);
 				exit(99);
@@ -96,22 +96,26 @@ int main(int argc, char *argv[])
 	}
 	fdt = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	fdf = open(argv[1], O_RDONLY);
-	if (fdf == -1){
+	if (fdf == -1)
+	{
 		write(STDERR_FILENO, "Error: Can't read from file ", 28);
 		for (i = 0; argv[1][i] != '\0'; i++)
 		{
 			write(STDERR_FILENO, &argv[1][i], 1);
 		}
 		write(STDERR_FILENO, "\n", 1);
-		return (98);}
-	if (fdt == -1){
+		return (98);
+	}
+	if (fdt == -1)
+	{
 		write(2, "Error: Can't write to ", 22);
 		for (i = 0; argv[2][i] != '\0'; i++)
 		{
 			write(2, &argv[2][i], 1);
 		}
 		write(2, "\n", 1);
-		return (99);}
+		return (99);
+	}
 	write_file(fdt, fdf, r, w, argv[1], argv[2]);	
 	check_close(fdf, fdt);
 	return (0);
