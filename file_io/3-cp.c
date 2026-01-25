@@ -16,7 +16,7 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 	ssize_t written = 0;
 	char *str = malloc(1024);
 	if (str == NULL)
-		return (-1);
+		exit (-1);
 	do
 	{
 		r = read(fdf, str, 1024);
@@ -49,6 +49,7 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 		}
 		written = 0;
 	} while (1);
+	free(str);
 }
 /**
  * check_close - checks if file closed
@@ -115,7 +116,6 @@ int main(int argc, char *argv[])
 	}
 	write_file(fdt, fdf, r, w, argv[1], argv[2]);	
 	check_close(fdf, fdt);
-	free(str);
 	return (0);
 }
 
