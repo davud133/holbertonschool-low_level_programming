@@ -10,7 +10,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *tmp;
 
-	tmp = ht->array[hash_djb2((unsigned *char)key) % ht->size];
+	tmp = ht->array[hash_djb2((unsigned char *)key) % ht->size];
 	while (tmp != NULL)
 	{
 		if (strcmp(tmp->key, key) == 0)
