@@ -12,6 +12,8 @@
  */
 void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2)
 {
+	r = 0;
+	w = 0;
 	int i;
 	ssize_t written = 0;
 	char *str = malloc(1024);
