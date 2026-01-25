@@ -15,6 +15,8 @@ void write_file(int fdt, int fdf, ssize_t r, ssize_t w, char *argv1, char *argv2
 	int i;
 	ssize_t written = 0;
 	char *str = malloc(1024);
+	if (str == NULL)
+		return (-1);
 	do
 	{
 		r = read(fdf, str, 1024);
@@ -84,9 +86,6 @@ int main(int argc, char *argv[])
 	int i;
 	ssize_t r, w;
 
-
-	if (str == NULL)
-		return (-1);
 	if (argc < 3 || argc > 3)
 	{
 		write(2, "Usage: cp file_from file_to\n", 28);
