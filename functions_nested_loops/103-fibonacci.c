@@ -8,11 +8,11 @@
  */
 int main(void)
 {
-	unsigned long int n1 = 1;
-	unsigned long int n2 = 2;
-	unsigned long int n3;
-	unsigned long int sum;
-	while (n1 + n2 < 4000000)
+	int n1 = 1;
+	int n2 = 2;
+	int n3 = 0;
+	int sum;
+	while (n3 < 4000000)
 	{
 		n3 = n1 + n2;
 		n1 = n2;
@@ -20,6 +20,6 @@ int main(void)
 		if (n3 % 2 == 0)
 			sum += n3;
 	}
-	printf("%ld\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
