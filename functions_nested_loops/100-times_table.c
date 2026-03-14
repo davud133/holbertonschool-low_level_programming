@@ -41,8 +41,8 @@ void print_times_table(int n)
 				if (k != n)
 				{
 					Helper(i * k);
-					write(1, ',', 1);
-					write(1, ' ', 1);
+					write(1, ",", 1);
+					write(1, " ", 1);
 				}
 				else
 					Helper(i * k);
