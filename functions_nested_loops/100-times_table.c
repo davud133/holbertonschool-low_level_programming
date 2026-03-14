@@ -15,10 +15,10 @@ void  Helper(int n)
 		num[i] = n % 10;
 		n = n / 10;
 	}
-	for (i = 0; num[i] != -2; i++)
+	for (i = i - 1; i > -1; i--)
 	{
 		l = num[i] + '0';
-		write(1, l, 1);
+		write(1, &l, 1);
 	}
 }
 
