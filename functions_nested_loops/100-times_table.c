@@ -10,7 +10,7 @@ void  Helper(int n)
 	int i;
 	int num[4] = {-1, -1, -1, -2};
 	char l;
-	for (i = 0; n > 0; i++)
+	for (i = 0; n > -1; i++)
 	{
 		num[i] = n % 10;
 		n = n / 10;
