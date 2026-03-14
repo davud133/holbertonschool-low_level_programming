@@ -9,7 +9,7 @@ void  Helper(int n)
 {
 	int i;
 	int num[4] = {-1, -1, -1, -2};
-	int l;
+	char l;
 	for (i = 0; n > 0; i++)
 	{
 		num[i] = n % 10;
@@ -17,8 +17,8 @@ void  Helper(int n)
 	}
 	for (i = 0; num[i] != -2; i++)
 	{
-		l = num[i];
-		write(1, l + '0', 1);
+		l = num[i] + '0';
+		write(1, l, 1);
 	}
 }
 
