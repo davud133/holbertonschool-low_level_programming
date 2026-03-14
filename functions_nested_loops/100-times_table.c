@@ -39,6 +39,7 @@ void print_times_table(int n)
 {
 	int i;
 	int k;
+	char new_line = '\n';
 	if (n > -1 && n < 16)
 	{
 		for (i = 0; i < n + 1; i++)
@@ -54,6 +55,7 @@ void print_times_table(int n)
 				else
 					Helper(i * k);
 			}
+			write(1, &new_line, 1);
 		}
 	}
 }
