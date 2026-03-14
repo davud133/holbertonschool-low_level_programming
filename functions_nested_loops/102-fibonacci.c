@@ -12,6 +12,7 @@ int main(void)
 	unsigned long int n2 = 2;
 	unsigned long int n3;
 	int i = 0;
+
 	for (i = 0; i < 50; i++)
 	{
 		if (i != 49)
