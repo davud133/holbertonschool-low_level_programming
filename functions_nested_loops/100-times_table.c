@@ -39,23 +39,26 @@ void print_times_table(int n)
 {
 	int i;
 	int k;
-	char new_line = '\n';
 	if (n > -1 && n < 16)
 	{
 		for (i = 0; i < n + 1; i++)
 		{
 			for (k = 0; k < n + 1; k++)
 			{
-				if (k != n)
+				if (k == 0)
 				{
 					Helper(i * k);
-					write(1, ",", 1);
-					write(1, " ", 1);
 				}
 				else
+				{
+					write(1, "," ,1);
+					if (i * k < 10)
+						write(1, "  ", 2);
+					else if (i * k < 100)
+						write(1, " ", 1);
 					Helper(i * k);
 			}
-			write(1, &new_line, 1);
+			write(1, "\n", 1);
 		}
 	}
 }
