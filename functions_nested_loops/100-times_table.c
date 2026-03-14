@@ -57,6 +57,7 @@ void print_times_table(int n)
 					else if (i * k < 100)
 						write(1, " ", 1);
 					Helper(i * k);
+				}
 			}
 			write(1, "\n", 1);
 		}
