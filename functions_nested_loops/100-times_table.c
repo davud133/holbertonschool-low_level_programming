@@ -53,8 +53,10 @@ void print_times_table(int n)
 				{
 					write(1, "," ,1);
 					if (i * k < 10)
-						write(1, "  ", 2);
+						write(1, "   ", 3);
 					else if (i * k < 100)
+						write(1, "  ", 2);
+					else if (i * k < 1000)
 						write(1, " ", 1);
 					Helper(i * k);
 				}
