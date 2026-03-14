@@ -10,7 +10,7 @@ int main()
 {
 	int n = 1024;
 	int sum = 0;
-	itn i;
+	int i;
 
 	for (int i = 1, i < n; i++)
 	{
