@@ -7,13 +7,15 @@
  */
 void  Helper(int n)
 {
+	int i;
+	int num[4] = {-1, -1, -1, -2};
+	char l;
+
+	l = 0 + '0';
 	if (n == 0)
-		write(1, 0 + '0', 1);
+		write(1,&l, 1);
 	else
 	{
-		int i;
-		int num[4] = {-1, -1, -1, -2};
-		char l;
 		for (i = 0; n > 0; i++)
 		{
 			num[i] = n % 10;
