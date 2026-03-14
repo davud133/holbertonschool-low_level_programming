@@ -12,6 +12,7 @@ int main(void)
 	int n2 = 1;
 	int n3 = 0;
 	int sum;
+
 	while (n3 < 4000000)
 	{
 		n3 = n1 + n2;
