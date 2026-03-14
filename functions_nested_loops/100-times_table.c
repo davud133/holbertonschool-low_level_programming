@@ -13,7 +13,7 @@ void  Helper(int n)
 
 	l = 0 + '0';
 	if (n == 0)
-		write(1,&l, 1);
+		write(1, &l, 1);
 	else
 	{
 		for (i = 0; n > 0; i++)
@@ -39,6 +39,7 @@ void print_times_table(int n)
 {
 	int i;
 	int k;
+
 	if (n > -1 && n < 16)
 	{
 		for (i = 0; i < n + 1; i++)
@@ -51,7 +52,7 @@ void print_times_table(int n)
 				}
 				else
 				{
-					write(1, "," ,1);
+					write(1, ",", 1);
 					if (i * k < 10)
 						write(1, "   ", 3);
 					else if (i * k < 100)
