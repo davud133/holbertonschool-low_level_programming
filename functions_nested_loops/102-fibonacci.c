@@ -8,13 +8,16 @@
  */
 int main(void)
 {
-	int n1 = 1;
-	int n2 = 2;
-	int n3;
+	long long int n1 = 1;
+	long long int n2 = 2;
+	long long int n3;
 	int i = 0;
 	for (i = 0; i < 50; i++)
 	{
-		printf("%d, ", n1);
+		if (i != 49)
+			printf("%d, ", n1);
+		else
+			printf("%d", n1);
 		n3 = n1 + n2;
 		n1 = n2;
 		n2 = n3;
