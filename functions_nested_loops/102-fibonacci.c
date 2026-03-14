@@ -8,9 +8,9 @@
  */
 int main(void)
 {
-	long long int n1 = 1;
-	long long int n2 = 2;
-	long long int n3;
+	unsigned long int n1 = 1;
+	unsigned long int n2 = 2;
+	unsigned long int n3;
 	int i = 0;
 	for (i = 0; i < 50; i++)
 	{
