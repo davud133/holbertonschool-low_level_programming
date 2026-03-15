@@ -19,6 +19,7 @@ int main(void)
 				biggest = i;
 	}
 	printf("%lud\n", biggest);
+	return (0);
 }
 int _is_prime(unsigned long int n)
 {
