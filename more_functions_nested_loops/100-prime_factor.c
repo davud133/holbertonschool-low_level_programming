@@ -11,7 +11,8 @@ int _is_prime(unsigned long int n);
 int main(void)
 {
 	unsigned long int i;
-	unsigned long int n = 612852475143UL;	
+	unsigned long int n = 612852475143UL;
+
 	for (i = 2; i < sqrt(n); i++)
 	{
 		if (n % i == 0)
@@ -21,12 +22,13 @@ int main(void)
 				i = 2;
 			}
 	}
-	printf("%lu\n",n);
+	printf("%lu\n", n);
 	return (0);
 }
 int _is_prime(unsigned long int n)
 {
 	unsigned long int i;
+
 	for (i = 2; i < n; i++)
 	{
 		if (n % i == 0)
