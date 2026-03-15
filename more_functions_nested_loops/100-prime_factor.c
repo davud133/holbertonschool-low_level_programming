@@ -9,9 +9,9 @@
 int _is_prime(int n);
 int main(void)
 {
-	unsigned long biggest = 0;
-	unsigned long i;
-	unsigned long n = 612852475143LL / 2 + 1;
+	unsigned long int biggest = 0;
+	unsigned long int i;
+	unsigned long int n = 612852475143 / 2 + 1;
 	for (i = 1; i < n; i++)
 	{
 		if ( n % i == 0)
@@ -20,9 +20,9 @@ int main(void)
 	}
 	printf("%lud\n", biggest);
 }
-int _is_prime(unsigned long n)
+int _is_prime(unsigned long int n)
 {
-	unsigned long i;
+	unsigned long int i;
 	for (i = 2; i < n / 2 + 1; i++)
 	{
 		if (n % i == 0)
