@@ -6,7 +6,7 @@
  *
  * Return: nothing
  */
-int _is_prime(int n);
+int _is_prime(unsigned long int n);
 int main(void)
 {
 	unsigned long int biggest = 0;
