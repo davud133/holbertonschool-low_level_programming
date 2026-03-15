@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 /**
  * main - Entry point
  *
@@ -11,14 +12,17 @@ int main(void)
 {
 	unsigned long int biggest = 0;
 	unsigned long int i;
-	unsigned long int n = 612852475143 / 2 + 1;
-	for (i = 1; i < n; i++)
+	unsigned long int n = 612852475143UL;	
+	for (i = 2; i < sqrt(n); i++)
 	{
-		if ( n % i == 0)
+		printf("Calculating: %ld\n",i);
+		if (n % i == 0)
 			if (_is_prime(i))
+			{
 				biggest = i;
+			}
 	}
-	printf("%lud\n", biggest);
+	printf("%lu\n",n / biggest);
 	return (0);
 }
 int _is_prime(unsigned long int n)
