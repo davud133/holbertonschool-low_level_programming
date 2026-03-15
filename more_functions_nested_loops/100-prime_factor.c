@@ -19,15 +19,17 @@ int main(void)
 			if (_is_prime(i))
 			{
 				biggest = i;
+				n = n / i;
+				i = 2;
 			}
 	}
-	printf("%lu\n",n / biggest);
+	printf("%lu\n",n);
 	return (0);
 }
 int _is_prime(unsigned long int n)
 {
 	unsigned long int i;
-	for (i = 2; i < n / 2 + 1; i++)
+	for (i = 2; i < n; i++)
 	{
 		if (n % i == 0)
 			return (0);
