@@ -15,7 +15,6 @@ int main(void)
 	unsigned long int n = 612852475143UL;	
 	for (i = 2; i < sqrt(n); i++)
 	{
-		printf("Calculating: %ld\n",i);
 		if (n % i == 0)
 			if (_is_prime(i))
 			{
