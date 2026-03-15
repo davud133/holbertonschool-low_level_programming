@@ -1,13 +1,29 @@
 #include <stdio.h>
 #include <math.h>
 /**
+ * _is_prime - finds if a number is prime
+ * @n: number
+ *
+ * Return: integer
+ */
+int _is_prime(unsigned long int n)
+{
+	unsigned long int i;
+
+	for (i = 2; i < n; i++)
+	{
+		if (n % i == 0)
+			return (0);
+	}
+	return (1);
+}
+/**
  * main - Entry point
  *
  * Description: a new task
  *
  * Return: nothing
  */
-int _is_prime(unsigned long int n);
 int main(void)
 {
 	unsigned long int i;
@@ -25,14 +41,4 @@ int main(void)
 	printf("%lu\n", n);
 	return (0);
 }
-int _is_prime(unsigned long int n)
-{
-	unsigned long int i;
 
-	for (i = 2; i < n; i++)
-	{
-		if (n % i == 0)
-			return (0);
-	}
-	return (1);
-}
